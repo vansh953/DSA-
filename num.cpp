@@ -32,7 +32,22 @@ cout<<n/i<<" ";
 }
 }
 }
+void div1(int n){
+    vector <int> v;
+    for(int i=1;i<sqrt(n);i++){
+        if(n%i==0){
+            v.push_back(i);
+        }
+        if(n/i!=i){
+            v.push_back(n/i);
+        }
+    }
+    sort(v.begin(),v.end());
+    for(auto it : v){
+        cout<<it<<" ";
+    }
+}
 int main(){
-div(36);
+div1(36);
     return 0;
 }
